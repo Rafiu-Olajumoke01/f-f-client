@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.footer_background{
+    width: 100vw;
+    height: 80vh;
+    color: #fff;
+    background-color: #000;
+}
+
+.heads_p{
+    color: grey;
+}
+
+.All_page a{
+    text-decoration: none;
+    color: grey;
+}
+
+.coffee{
+    width: 60px;
+    height: 60px;
+}
+
+.resources a{
+    text-decoration: none;
+    color: grey;
+}
+
+.coffee_text{
+    background-color: #fff;
+    width: 18rem;
+    height: 4rem;
+    border-radius: 10px;
+}
+
+.copyright{
+    margin-top: 15%;
+    text-align: center;
+}

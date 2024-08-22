@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.food_text {
+    margin-top: 5%;
+}
+
+.popular {
+    color: rgb(255, 7, 48);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 11px 26px;
+    background: rgb(255, 7, 48);
+    border: 2px solid rgb(255, 7, 48);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .50s ease;
+}
+
+.btn:hover{
+    background: transparent;
+    color: rgb(255, 7, 48);
+    box-shadow: 0 0 20px rgb(255, 7, 48);
+}
+
+
+@media (max-width: 570px) {
+    .most_popular_recipes img {
+        height: 300px;
+        margin-left: 40px;
+    }
+
+    .most_popular_recipes a {
+        text-decoration: none;
+
+    }
+
+    .chicken_recipes img {
+        height: 200px;
+        margin-left: 50px;
+    }
+
+    .chicken_recipes a {
+        text-decoration: none;
+    }
+
+    .food_imgfirst {
+        display: none;
+    }
+
+    .food_text {
+        margin: 0px;
+    }
+}

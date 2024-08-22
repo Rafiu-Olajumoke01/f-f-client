@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.bg-cover{
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+}
+
+.bg-cover a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.bg-cover h2{
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 15%;
+}
+
+.slide-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travel\ and\ food2.jpg);
+
+}
+/* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
+.slide-2{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travel\ and\ food2.jpg);
+}
+
+.slide-3{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travelimages/travelslide2.jpg);
+}
+
+.btn {
+   
+    padding: 14px 38px;
+    border-radius: 50%;
+}
+
+.btn-brand{
+    margin-top: 5%;
+    color:  black;
+    font-weight: 500;
+    border-color: #fff;
+    border-radius: 5px;
+}
+
+.btn-brand:hover{
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.card-title a{
+    text-decoration: none;
+    color: black;
+}
+
+.card-title a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.Readmore{
+    text-decoration: none;
+    color: black;
+}
+
+.krugger a{
+    text-decoration: none;
+    color: black;
+}
+
+.desert img{
+    height: 350px;
+}
+
+
+
+.email{
+    height: 200%;
+}
+
+.subscribe a{
+    text-decoration: none;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    color: rgb(255, 7, 48);
+}
+
+.insider{
+    margin-top: 6%;
+}
+.stories{
+    margin-top: 7%;
+}
+.banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./../images/Beaches/praslin.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+}
+
+.banner_text{
+    color: #fff;
+    position: absolute;
+    left: 27%;
+    top: 30%;
+   
+}
+
+.banner_paragraph{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+.categories img{
+    width: 450px;
+    height: 350px;
+    margin: 2px;
+    margin-top: 2px;
+}
+
+
+

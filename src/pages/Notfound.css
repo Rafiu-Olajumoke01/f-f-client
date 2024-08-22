@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.my404{
+    margin-left: 25%;
+    margin-top: 0px;
+}
+
+.notfound img{
+    width: 500px;
+    height: 500px;
+}
+
+.notfound h2{
+    text-align: center;
+}
+
+.oops{
+    color: rgb(103, 5, 184);
+}
+.btn_explore{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(103, 5, 184);
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 45%;
+}
+
+.btn_explore:hover{
+    background: transparent;
+    transition: 0.5s;
+}

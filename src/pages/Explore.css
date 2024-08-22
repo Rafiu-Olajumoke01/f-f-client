@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.explore_banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travel\ and\ food2.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.explore_text{
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+.explore_imgtext img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.adventrous{
+    padding: 15px;
+    width: 250px;
+    border: 3px solid rgb(255, 7, 48);
+    border-radius: 5px;
+}
+
+.adventrous:hover{
+    background-color: rgb(255, 7, 48);
+    border-color: white;
+    color: white;
+}
+
+.amarachi img{
+    width: 350px;
+    height: 450px;
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+.amarachi p{
+    margin-top: 5%;
+}
+
+.trip_resources{
+    color: rgb(255, 7, 48);
+    font-weight: bold;
+}
+.link_resources{
+    color: black;
+    font-weight: bold;
+}
+
+.tripsecond{
+    color: black;
+    font-weight: 100;
+}
+
+.explore_beach_banner{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travelimages/beachdestination.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
+    margin-bottom: 5%;
+}
+
+.explore_beach_banner a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.beach_text{
+    margin-top: 12rem !important;
+}
+
+.beaches img{
+    height: 650px;
+}
+

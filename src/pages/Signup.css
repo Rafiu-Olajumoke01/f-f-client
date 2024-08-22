@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.image_part img{
+    margin-top: 5%;
+    height: 70%;
+    width: 100%;
+}
+
