@@ -11,7 +11,6 @@ import { useSelector } from 'react-redux';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Admindash from './pages/Admindash';
 import Details from './pages/Details';
 
 const Home = React.lazy(() => import("./pages/Home"))
@@ -45,10 +44,8 @@ function App() {
             <Route path='/news' element={<News />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            
             <Route path='/details/:id' element={<Details />} />
             <Route path='/explore' element={<Explore />} />
-            <Route path='/admindash' element={<Admindash />} />
             <Route path='/*' element={<Notfound />} />
           </Routes>
           <ToastContainer

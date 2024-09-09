@@ -2,12 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from "./../components/Navbar"
 import images from "./../images/Group 2.png"
-import { CiSearch } from "react-icons/ci";
-import { FaArrowRight } from "react-icons/fa";
-import { LuUser2 } from "react-icons/lu";
-import Fpost from '../components/Fpost';
-import "./Food.css";
 import Footer from "./../components/Footer";
+import "./Food.css";
 
 function Food() {
   return (
@@ -28,8 +24,6 @@ function Food() {
               </p>
               <Link to='/' className=" btn mt-5">Explore Recipes</Link>
             </div>
-
-
           </div>
 
           <div className='col-lg-6 col-md-6 col-sm-12 mt-5 food_imgfirst'>
@@ -43,7 +37,7 @@ function Food() {
         <div className="row">
           <div className="col-md-3">
 
-            <Link className='' to="/foodhotdog">
+            <Link className=''>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2020/07/DSC0001hot-dog-buns-.jpg.webp" alt="" className='img-fluid' />
               <h5><Link className='fw-bold' >simple homemade hot dog buns</Link></h5>
             </Link>
@@ -139,21 +133,21 @@ function Food() {
           <div className="col-md-4">
             <Link>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2023/09/White-Bean-Chicken-Chili-02-728x728.jpg.webp" alt="" className='img-fluid' />
-              <h6><Link className='fw-bold'>How to make white bean chicken chili</Link></h6>
+              <h5><Link className='fw-bold'>How to make white bean chicken chili</Link></h5>
             </Link>
           </div>
 
           <div className="col-md-4">
             <Link>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2024/01/Rasta-Pasta-6-728x728.jpg.webp" alt="" className='img-fluid' />
-              <h6><Link className='fw-bold'>How to make rasta pasta</Link></h6>
+              <h5><Link className='fw-bold'>How to make rasta pasta</Link></h5>
             </Link>
           </div>
 
           <div className="col-md-4">
             <Link>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2024/01/Rasta-Pasta-6-728x728.jpg.webp" alt="" className='img-fluid' />
-              <h6><Link className='fw-bold'>How to make rasta pasta</Link></h6>
+              <h5><Link className='fw-bold'>How to make rasta pasta</Link></h5>
             </Link>
           </div>
 
@@ -168,49 +162,27 @@ function Food() {
           <div className="col-md-4">
             <Link>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2024/07/Air-fryer-Catfish-1-728x728.jpg.webp" alt="" className='img-fluid' />
-              <h6><Link className='fw-bold'>How to make air fryer catfish</Link></h6>
+              <h5><Link className='fw-bold'>How to make air fryer catfish</Link></h5>
             </Link>
           </div>
 
           <div className="col-md-4">
             <Link>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2023/08/Air-Fryer-Popcorn-Chicken-3-728x728.png.webp" alt="" className='img-fluid' />
-              <h6><Link className='fw-bold'>How to make air fryer catfish</Link></h6>
+              <h5><Link className='fw-bold'>How to make air fryer catfish</Link></h5>
             </Link>
           </div>
 
           <div className="col-md-4">
             <Link>
               <img src="https://cheflolaskitchen.com/wp-content/uploads/2023/08/Crispy-Air-Fryer-Brussels-Sprouts-2-728x728.png.webp" alt="" className='img-fluid' />
-              <h6><Link className='fw-bold'>How to make air fryer catfish</Link></h6>
+              <h5><Link className='fw-bold'>How to make air fryer catfish</Link></h5>
             </Link>
           </div>
 
 
         </div>
       </div>
-
-      <div className="container chicken_recipes">
-        <h3 className='fw-bold'>RECOMMENDED</h3>
-        <div className="row">
-          <div className="col-md-4">
-            <img src="https://res.cloudinary.com/grow-me/image/fetch/c_fill,h_200,q_auto,w_300/f_auto,fl_lossy/https%3A%2F%2Fcheflolaskitchen.com%2Fwp-content%2Fuploads%2F2023%2F06%2FAfrican-Spaghetti-Sauce-with-Meatballs.jpg" alt="" className='img-fluid' />
-            <h4><Link className='fw-bold'>How to make air fryer catfish</Link></h4>
-          </div>
-
-
-          <div className="col-md-4">
-            <img src="https://res.cloudinary.com/grow-me/image/fetch/c_fill,h_200,q_auto,w_300/f_auto,fl_lossy/https%3A%2F%2Fcheflolaskitchen.com%2Fwp-content%2Fuploads%2F2020%2F08%2FNigerian-Chicken-Stew-01.png" alt="" className='img-fluid' />
-            <h4><Link className='fw-bold'>How to make air fryer catfish</Link></h4>
-          </div>
-
-          <div className="col-md-4">
-            <img src="https://res.cloudinary.com/grow-me/image/fetch/c_fill,h_200,q_auto,w_300/f_auto,fl_lossy/https%3A%2F%2Fcheflolaskitchen.com%2Fwp-content%2Fuploads%2F2018%2F06%2FEgusi-soup-Recipe-2.jpg" alt="" className='img-fluid' />
-            <h4><Link className='fw-bold'>How to make air fryer catfish</Link></h4>
-          </div>
-        </div>
-      </div>
-
 
       <h3 className='fw-bold text-center'>Lose It Nigerian</h3>
       <div className="container">

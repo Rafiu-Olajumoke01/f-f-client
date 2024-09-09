@@ -19,7 +19,7 @@ function Explore() {
       <div className="container explore_imgtext">
         <div className="row">
           <div className="col-md-2">
-            <img src={require("./../images/travelimages/beautyofarica.jpg")} alt="" className='img-fluid' />
+            {/* <img src="./../images/beauty of africa.jpg" alt="" className='img-fluid' /> */}
           </div>
 
           <div className="col-md-10">
@@ -110,7 +110,7 @@ function Explore() {
       <div className="container mb-5 amarachi w-75">
         <div className="row">
           <div className="col-md-6">
-            <img src={require("./../images/travelimages/amarachi.jpg")} alt="" className='img-fluid' />
+            <img src={require("./../images/amarachi.jpg")} alt="" className='img-fluid' />
           </div>
 
           <div className="col-md-6 mt-5 trip_part">

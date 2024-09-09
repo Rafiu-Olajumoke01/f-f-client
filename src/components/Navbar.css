@@ -8,10 +8,14 @@
 .navbar{
     background-color: #fff;
     height: 80px;
-    /* margin: 20px; */
     border-radius: 2px;
     padding: 0.5rem;
     font-weight: bolder;
+}
+
+.truck{
+    color: rgb(255, 7, 48);
+    font-size: 10px;
 }
 
 .navbar-brand{
@@ -26,19 +30,6 @@
     color: rgb(255, 7, 48);
     font-size: larger;
     font-weight: 700;
-}
-.subscribe_btn {
-    background-color: rgb(255, 7, 48);
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s background-color;
-}
-
-.subscribe_btn:hover {
-    background-color: rgb(255, 7, 48);
 }
 
 .navbar-toggler {
@@ -100,7 +91,3 @@
 }
 
 
-.truck{
-    color: rgb(255, 7, 48);
-    font-size: 10px;
-}

@@ -26,12 +26,6 @@ function Footer() {
                             <h3 className='pages fw-bold mt-5 mb-4'>Resources</h3>
                             <p><Link>My Accomodation Booking Link</Link></p>
                             <p><Link>Find destination tour here</Link></p>
-                            <div className='coffee_text d-flex justify-content-center align-items-center mt-5'>
-                                <img src={require("./../images/travelimages/coffee-removebg-preview.png")}
-                                    alt="" className='img-fluid coffee' />
-                                <h4 className=''><Link>Buy Me a Coffee</Link></h4>
-                            </div>
-
                         </div>
                     </div>
 

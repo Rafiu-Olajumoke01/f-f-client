@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import TypedText from "./../components/TypedText"
 import "./Travel.css"
 import { Link } from "react-router-dom"
 import Navbar from "./../components/Navbar"
-import sahara from "./../images/travelimages/sahara desert.jpg"
-import krugger from "./../images/travelimages/krugger2.jpg"
-import beauty from "./../images/travelimages/beauty of africa.jpg"
+// import beauty from "./../images/travelimages/beauty of africa.jpg"
 import Props from './../components/Props'
 import axios from 'axios';
 import Footer from "./../components/Footer"
@@ -12,73 +11,33 @@ import Footer from "./../components/Footer"
 
 
 function Travel() {
-  const [photos, setPhotos] = useState(null)
 
-  useEffect(() => {
+  const strings = ['Hello', 'This is a world travel blog featuring beautiful destinations', 'New experiences and hidden places around the globe', 'Please Tag Along!.']
 
-    axios.get("https://graph.instagram.com/me/media?fields=id,media_url&access_token=IGQWROcFF6RVNJcGk5X2RMd1FyUWNIX255WUt2b25mUHJpel9yZA1RBb0Y5eEFGQnBQYUp0emc5SnFuWEphNDZAFRE5FR0E3eGwxS0w2QmpaUWpNdml0MHFSaEVwTVlZAR2hTcEkzQVRpSEFDTDNIemZAWbEVHeE5lN0kZD")
-      .then((res) => setPhotos(res.data.data))
-      .catch((err) => console.log(err))
-
-  }, [])
   return (
-    <div className=''>
+    <div className='container_all'>
       <Navbar />
-      <div id='hero-slider' className='carousel slide'>
-        <div className="carousel-inner">
-          <div className="carousel-item text-center bg-cover vh-100 active slide-1">
-            <div className="container h-100 d-flex align-items-center justify-content-center">
-              <div className="row justify-content-center">
-                <div className="col-lg-8">
-                  <h3 className="display-4 fw-bold text-white"><Link className='' to="/explore">101 BEST PLACES TO VISIT IN AFRICA</Link></h3>
-                  <h5 className='text-white mt-4'>Africa, the second largest continent (after Asia), covering about one-fifth of the total land surface of Earth</h5>
-                  <Link to="/explore" class="btn btn-brand">Explore</Link>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="container-fluid travel_image mt-5">
+        <div className="row mt-5">
+          <div className="col mt-5">
+            <h1 className='travel_imagetext fw-bold display-3 mt-5 text-center'>EXPLORE. DREAM. DISCOVER.</h1>
 
-          <div className="carousel-item text-center bg-cover vh-100 slide-2">
-            <div className="container h-100 d-flex align-items-center justify-content-center">
-              <div className="row justify-content-center">
-                <div className="col-lg-8">
-                  <h3 className="display-4 text-white fw-bold"><Link className='' to="/travel">Summited Africa's Second Highest Mountain</Link></h3>
-                  <h5 className='text-white mt-4'>There are many words to describe how i feel writing this article, but the overwhelming feeling is pride.</h5>
-                </div>
-              </div>
-            </div>
+            <h2 className='mt-5 fw-bold display-5 animate'>
+              <TypedText strings={strings} />
+            </h2>
 
           </div>
 
-
-          <div className="carousel-item text-center bg-cover vh-100 slide-3">
-            <div className="container h-100 d-flex align-items-center justify-content-center">
-              <div className="row justify-content-center">
-                <div className="col-lg-8">
-                  <h3 className="display-4 text-white fw-bold"><Link className='' to="/travel">2023: The Year In Review</Link></h3>
-                  <h5 className='text-white mt-4'>There are many words to describe how i feel writing this article, but the overwhelming feeling is pride.</h5>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#hero-slider" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#hero-slider" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
-
       </div>
+
 
       <div className="container mt-5 mb-5">
         <div className="row">
           <div className="col-md-8">
+
             <div className="card">
-              <img src={sahara} className="card-img-top" alt="..." />
+              <img src={require("./../images/travelimages/sahara desert.jpg")} className="card-img-top" alt="..." />
               <div className="card-body">
                 <div className='card-title mt-3'>
                   <Link className='fw-bold display-3'>SAHARA DESERT</Link>
@@ -93,7 +52,7 @@ function Travel() {
 
           <div className="col-md-4">
             <div className="card">
-              <img src={krugger} className="card-img-top img-fluid" alt="..." />
+              <img src={require("./../images/travelimages/krugger2.jpg")} className="card-img-top img-fluid" alt="..." />
               <div className="card-body">
                 <div className='krugger mt-1'>
                   <Link className='fw-bold display-6 '>KRUGGER NATIONAL PARK</Link>
@@ -171,26 +130,6 @@ function Travel() {
         </div>
       </div>
 
-      <div className='insider'>
-        <h4 className='text-center m-5 insider_text fw-bold display-6'>Become an insider</h4>
-      </div>
-
-      <div className="container mb-5 d-flex justify-content-center align-items-center">
-        <div className="row">
-          <div className="col-md-4 ">
-            <input type="text" placeholder='Enter Your Email' className='form-control' />
-          </div>
-
-          <div className="col-md-4">
-            <input type="text" placeholder='Enter Your Username' className='form-control' />
-          </div>
-
-          <div className="col-md-4 subscribe mt-2">
-            <Link className='fw-bold'>SUBSCRIBE</Link>
-          </div>
-        </div>
-      </div>
-
       <div className="stories">
         <h4 className='text-center mt-5 mb-5'>Stories from Africa.....Around The World</h4>
       </div>
@@ -199,76 +138,21 @@ function Travel() {
       <div className="container d-flex justify-content-center align-items-center mb-5">
         <div className="row">
           <div className="col">
-            <img src="https://thumbs.dreamstime.com/b/map-africa-6049221.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div className="container-fluid mb-5 h-100 d-flex align-items-center justify-content-center">
-        <div className="row justify-content-center">
-          <div className="col justify-content-center">
-            <div className="banner img-fluid">
-              <h1 className='banner_text text-white fw-bold position-relative display-4 '>DESTINATION THAT INSPIRE</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className='featured '>
-              <h2 className='fw-bold mb-5'>Featured Categories</h2>
-            </div>
+            <img src="https://thumbs.dreamstime.com/b/map-africa-6049221.jpg" alt="" className='img-fluid' />
           </div>
         </div>
       </div>
 
 
-      <div className="container categories mb-5">
-        <div className="row">
-          <div className="col-md-4">
-            <Link to="/explore"><img src={require("./../images/travelimages/Africa image.jpg")} alt="" className='img-fluid' /></Link>
-          </div>
-
-          <div className="col-md-4">
-            <Link><img src={require("./../images/travelimages/Asia images.jpg")} alt="" className='img-fluid' /></Link>
-          </div>
-
-          <div className="col-md-4">
-            <Link><img src={require("./../images/travelimages/Europe images.jpg")} alt="" className='img-fluid' /></Link>
-          </div>
-
-          <div className="col-md-4 mt-4">
-            <Link><img src={require("./../images/travelimages/Kenya.jpg")} alt="" className='img-fluid' /></Link>
-          </div>
-
-          <div className="col-md-4 mt-4">
-            <Link><img src={require("./../images/travelimages/nigeria.jpg")} alt="" className='img-fluid' /></Link>
-          </div>
-
-          <div className="col-md-4 mt-4">
-            <Link><img src={require("./../images/travelimages/North America Image.jpg")} alt="" className='img-fluid' /></Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className='popular_places'>
-              <h2 className='fw-bold mb-5'>Recent Budget Travel Post</h2>
-            </div>
-
-          </div>
-        </div>
+      <div className='popular_places'>
+        <h2 className='fw-bold mb-5'>Recent Budget Travel Post</h2>
       </div>
 
       <div className="container desert mb-5">
         <div className="row">
           <div className="col-md-4">
             <div className="card">
-              <img src={require("./../images/travelimages/forestlodge.jpg")} className="card-img-top" alt="..." />
+              <img src={require("./../images/forestlodge.jpg")} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title fw-bold">Camping & Hiking at Castle Forest Lodge</h5>
                 <p className="card-text">
@@ -314,27 +198,7 @@ function Travel() {
       <h2 className='container travel_on_ig mt-5 fw-bold'>Travel with me on Instagram</h2>
 
 
-      <div className="container-fluid">
-        <div className="row">
-
-          {photos == null && <h1 className='m-auto'>Loading....</h1>}
-
-          {
-            photos?.length == 0 ?
-              <h1>No Photos Found</h1>
-              :
-
-              photos?.map((photo) => (
-                <div className="col-md-3">
-                  <Props image={photo?.media_url} text={"hello"} />
-                </div>
-              ))
-          }
-
-        </div>
-      </div>
-
-      <Footer/>
+      <Footer />
     </div>
 
   )

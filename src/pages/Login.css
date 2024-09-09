@@ -5,7 +5,46 @@
     box-sizing: border-box;
 }
 
+.welcome{
+    color: rgb(236, 10, 48);
+}
 .signup{
     text-decoration: none;
     color: rgb(236, 10, 48);
+}
+
+/* .signup{
+    display: inline-block;
+    padding: 11px 26px;
+    background: rgb(255, 7, 48);
+    border: 2px solid rgb(255, 7, 48);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .50s ease;
+    color: #fff;
+}
+
+.signup:hover{
+    background: transparent;
+    color: rgb(255, 7, 48);
+    box-shadow: 0 0 20px rgb(255, 7, 48);
+} */
+
+.login{
+    display: inline-block;
+    padding: 11px 26px;
+    background: rgb(255, 7, 48);
+    border: 2px solid rgb(255, 7, 48);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .50s ease;
+    color: #fff;
+}
+
+.login:hover{
+    background: transparent;
+    color: rgb(255, 7, 48);
+    box-shadow: 0 0 20px rgb(255, 7, 48);
 }

@@ -4,55 +4,31 @@
     font-family: sans-serif;
 }
 
-.bg-cover{
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
+.overall{
+    width: 100%;
+}
+
+.travel_image{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travelimages/home\ blog\ 2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 
 }
 
-.bg-cover a{
-    text-decoration: none;
-    color: #fff;
+
+.travel_imagetext{
+    margin-top: 12% !important;
+    color: #fff !important;
 }
 
-.bg-cover h2{
-    text-align: left;
-    margin-left: 15px;
-    margin-top: 15%;
+.animate{
+    color: white !important;
+    text-align: center !important;
 }
 
-.slide-1{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travel\ and\ food2.jpg);
-
-}
-/* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
-.slide-2{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travel\ and\ food2.jpg);
-}
-
-.slide-3{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../images/travelimages/travelslide2.jpg);
-}
-
-.btn {
-   
-    padding: 14px 38px;
-    border-radius: 50%;
-}
-
-.btn-brand{
-    margin-top: 5%;
-    color:  black;
-    font-weight: 500;
-    border-color: #fff;
-    border-radius: 5px;
-}
-
-.btn-brand:hover{
-    border-color: #fff;
-    background-color: #fff;
-}
 
 .card-title a{
     text-decoration: none;
@@ -76,56 +52,47 @@
 
 .desert img{
     height: 350px;
-}
+} 
 
 
-
-.email{
-    height: 200%;
-}
-
-.subscribe a{
-    text-decoration: none;
-    width: 250px;
-    height: 250px;
-    border: 1px solid black;
-    padding: 10px;
-    color: rgb(255, 7, 48);
-}
-
-.insider{
-    margin-top: 6%;
-}
 .stories{
     margin-top: 7%;
 }
-.banner{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./../images/Beaches/praslin.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 90vh;
-}
 
-.banner_text{
-    color: #fff;
-    position: absolute;
-    left: 27%;
-    top: 30%;
-   
-}
 
-.banner_paragraph{
-    position: absolute;
-    top: 35%;
-    left: 8%;
-}
 .categories img{
     width: 450px;
     height: 350px;
     margin: 2px;
     margin-top: 2px;
 }
+ 
+
+@media (max-width: 768px){
+
+    .container_all{
+        width: 90%;
+        height:  auto ;
+    }
+
+    .desert .card{
+        margin-bottom: 10%;
+    }
+
+    .navbar-toggler{
+        margin-right: 35%;
+       
+    }
+
+    .animate{
+        margin-top: 20% !important;
+    }
+
+    .travel_imagetext{
+        margin-top: 20% !important;
+    }
+}
 
 
 
+   

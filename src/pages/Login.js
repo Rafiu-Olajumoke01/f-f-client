@@ -41,7 +41,7 @@ function Login() {
 
                 <div className="col-md-6">
                     <form onSubmit={handleSubmit} className=''>
-                        <h2 className='fw-bold'>WELCOME BACK</h2>
+                        <h2 className='fw-bold welcome'>WELCOME BACK</h2>
                         <div className='input-box'>
                             <label htmlFor="" className="form-label">Email</label>
                             {/* <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" /> */}
@@ -54,10 +54,10 @@ function Login() {
                             <input name='password' type="password" className="form-control" />
                         </div>
 
-                        <button className="btn btn-md btn-dark mt-4">LOGIN</button>
+                       <button className='login mt-4'>LOGIN</button>
                     </form>
 
-                    <p className='mt-4'>You don't have an account <Link to="/signup" className='signup'>Signup</Link></p>
+                   <h6 className='mt-4 '>Don't have an account? <Link className='signup' to="/signup">SIGN UP</Link></h6>
                 </div>
 
                 

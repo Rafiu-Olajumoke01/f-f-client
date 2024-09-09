@@ -8,3 +8,11 @@
 .details_second{
     line-height: 180%;
 }
+
+p{
+    text-align: justify;
+}
+
+li{
+    text-align: justify;
+}

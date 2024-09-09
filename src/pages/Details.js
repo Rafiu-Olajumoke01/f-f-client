@@ -22,7 +22,7 @@ function Details() {
                         </p>
 
                         <div>
-                            <img src="https://cheflolaskitchen.com/wp-content/uploads/2018/10/Jollof-Rice-17-720x1080.jpg.webp" alt=""  />
+                            <img src="https://cheflolaskitchen.com/wp-content/uploads/2018/10/Jollof-Rice-17-720x1080.jpg.webp" alt="" className='img-fluid' />
                         </div>
 
                         <h3 className='fw-bold mt-3 mb-3'>Jollof Rice Recipe</h3>
@@ -92,7 +92,7 @@ function Details() {
                         </div>
 
                         <div>
-                            <img src="https://cheflolaskitchen.com/wp-content/uploads/2018/10/Jollof-Rice-55-683x1024.jpg.webp" alt="" />
+                            <img src="https://cheflolaskitchen.com/wp-content/uploads/2018/10/Jollof-Rice-55-683x1024.jpg.webp" alt="" className='img-fluid' />
                         </div>
 
                     </div>

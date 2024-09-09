@@ -24,13 +24,9 @@ function Navbar() {
                 <li className="nav-item">
                   <Link className="nav-link mx-lg-2 fw-bold" to="/food">FOOD</Link>
                 </li>
-                
-                <li className="nav-item">
-                  <Link className="nav-link mx-lg-2 fw-bold" to="/travel">TRAVEL</Link>
-                </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link mx-lg-2 fw-bold" to="/news">DESTINATIONS</Link>
+                  <Link className="nav-link mx-lg-2 fw-bold" to="/travel">TRAVEL</Link>
                 </li>
 
                 <li className="nav-item">
@@ -40,12 +36,17 @@ function Navbar() {
                 <li className="nav-item">
                   <Link className="nav-link mx-lg-2 fw-bold" to="/contact">CONTACT</Link>
                 </li>
+
+               
+                
               </ul>
 
             </div>
           </div>
 
-          <Link to='/login' className='btn'>REGISTER</Link>
+          {/* <Link to='/login' className='btn'>REGISTER</Link> */}
+
+
 
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>

@@ -15,11 +15,11 @@ function Home() {
 
   const [photos, setPhotos] = useState(null)
 
-  useEffect(() =>{
+  useEffect(() => {
 
     axios.get("https://graph.instagram.com/me/media?fields=id,media_url&access_token=IGQWROcFF6RVNJcGk5X2RMd1FyUWNIX255WUt2b25mUHJpel9yZA1RBb0Y5eEFGQnBQYUp0emc5SnFuWEphNDZAFRE5FR0E3eGwxS0w2QmpaUWpNdml0MHFSaEVwTVlZAR2hTcEkzQVRpSEFDTDNIemZAWbEVHeE5lN0kZD")
-    .then((res) => setPhotos(res.data.data))
-    .catch((err) => console.log(err))
+      .then((res) => setPhotos(res.data.data))
+      .catch((err) => console.log(err))
 
   }, [])
 
@@ -60,7 +60,7 @@ function Home() {
             <div className="container h-100 d-flex align-items-center justify-content-center">
               <div className="row justify-content-center">
                 <div className="col-lg-8">
-                  <h4 className="display-2 text-white fw-bold"><Link>News, Analysis and Insights</Link></h4>
+                  <h4 className="display-2 text-white fw-bold"><Link>Travel And Eat Good Food</Link></h4>
                 </div>
               </div>
             </div>
@@ -80,33 +80,57 @@ function Home() {
 
       {/* End Of Slider */}
 
-      
+
 
       {/* Begining of Props */}
       <h2 className='slider_text mt-2 text-center display-6 fw-bold'>THEN THERE IS MY INSTAGRAM</h2>
 
       <div className="container-fluid mb-5 instagram">
         <div className="row">
-          
-          
+
+
           {photos == null && <h1 className='m-auto'>Loading....</h1>}
 
           {
             photos?.length == 0 ?
-            <h1>No Photos Found</h1>
-            :
+              <h1>No Photos Found</h1>
+              :
 
-            photos?.map((photo) =>(
-              <div className="col-md-3">
-            <Props image={photo?.media_url} text={"hello"} />
-          </div>
-            ))
+              photos?.map((photo) => (
+                <div className="col-md-3">
+                  <Props image={photo?.media_url} text={"hello"} />
+                </div>
+              ))
           }
-         
+
+        </div>
+      </div>
+
+      <div className="container-fluid instagram_dynamic mb-3">
+        <div className="row">
+          <div className="col-md-3">
+            <img src="https://img.freepik.com/free-photo/delicious-cupcakes-with-blueberries_23-2150798002.jpg?ga=GA1.2.1862932586.1721573627&semt=ais_hybrid" alt="" className='image_one' />
+          </div>
+
+          <div className="col-md-3">
+            <img src="https://img.freepik.com/free-photo/medium-shot-people-posing-with-baggage_23-2149243411.jpg?ga=GA1.1.1862932586.1721573627&semt=ais_hybrid" alt="" className='image' />
+          </div>
+
+          <div className="col-md-3">
+            <img src="https://img.freepik.com/premium-photo/glass-juice-fruit-wooden-table_1023064-41493.jpg?ga=GA1.1.1862932586.1721573627&semt=ais_hybrid" alt="" className='image' />
+          </div>
+
+          <div className="col-md-3">
+            <img src="https://img.freepik.com/free-photo/smiley-woman-with-red-baggage-medium-shot_23-2149380134.jpg?ga=GA1.1.1862932586.1721573627&semt=ais_hybrid" alt="" className='image' />
+          </div>
+
+          <div className="overlay">
+            <div className="text">Hey Friends! I am Glad to have you on my site, let have fun and explore the internet together</div>
+          </div>
         </div>
       </div>
       <Footer />
-{/*
+      {/*
 https://graph.instagram.com/me/media?fields=id,media_url&access_token=IGQWROcFF6RVNJcGk5X2RMd1FyUWNIX255WUt2b25mUHJpel9yZA1RBb0Y5eEFGQnBQYUp0emc5SnFuWEphNDZAFRE5FR0E3eGwxS0w2QmpaUWpNdml0MHFSaEVwTVlZAR2hTcEkzQVRpSEFDTDNIemZAWbEVHeE5lN0kZD
 */}
     </div>

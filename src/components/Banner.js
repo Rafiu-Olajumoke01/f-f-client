@@ -21,14 +21,14 @@ function Banner() {
             </p>
 
             <div className="main-btn mt-5">
-              <Link to="" className="btn">Expolre Food</Link>
-              <Link to="" className="btn btn2">Explore Travel</Link>
+              <Link to="/food" className="btn">Expolre Food</Link>
+              <Link to="travel" className="btn btn2">Explore Travel</Link>
             </div>
 
           </div>
 
           <div className="col-md-6 mt-3">
-            <img src="https://img.freepik.com/free-photo/mexican-food-concept-with-smartphone_23-2147812100.jpg?ga=GA1.1.1862932586.1721573627&semt=ais_hybrid" alt="" className='banner_img mt-5'/>
+            <img src="https://img.freepik.com/free-photo/delicious-burgers-us-labor-day_23-2150378697.jpg?ga=GA1.1.1862932586.1721573627&semt=ais_hybrid" alt="" className='banner_img mt-5'/>
           </div>
         </div>
       </div>

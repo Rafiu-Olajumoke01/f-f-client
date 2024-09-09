@@ -1,12 +1,50 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
 
-.image_part img{
+.image_part img {
     margin-top: 5%;
-    height: 70%;
+    height: 60%;
     width: 100%;
 }
 
+form {
+    line-height: 50px;
+}
+
+.login {
+    display: inline-block;
+    padding: 11px 26px;
+    background: rgb(255, 7, 48);
+    border: 2px solid rgb(255, 7, 48);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .50s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+.login:hover {
+    background: transparent;
+    color: rgb(255, 7, 48);
+    box-shadow: 0 0 20px rgb(255, 7, 48);
+}
+
+.sign_text {
+    color: rgb(255, 7, 48);
+}
+
+
+@media (max-width: 480px) {
+
+    form {
+        margin-top: 0px;
+    }
+
+    .image_part {
+        display: none;
+    }
+}
