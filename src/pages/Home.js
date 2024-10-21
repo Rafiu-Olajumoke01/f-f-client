@@ -21,6 +21,8 @@ function Home() {
       .then((res) => setPhotos(res.data.data))
       .catch((err) => console.log(err))
 
+    
+
   }, [])
 
   return (

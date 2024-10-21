@@ -15,11 +15,11 @@ function Footer() {
 
                         <div className="col-md-4 All_page">
                             <h3 className='pages fw-bold mt-5 mb-4'> All Pages</h3>
-                            <p className='pages_p'><Link>Food</Link></p>
-                            <p className='pages_p'><Link>Travel</Link></p>
-                            <p className='pages_p'><Link>Destination</Link></p>
-                            <p className='pages_p'><Link>About</Link></p>
-                            <p className='pages_p'><Link>Contact</Link></p>
+                            <p className='pages_p'><Link className='' to="/food">Food</Link></p>
+                            <p className='pages_p'><Link className='' to="/travel">Travel</Link></p>
+                            <p className='pages_p'><Link className='' to="/destination">Destination</Link></p>
+                            <p className='pages_p'><Link className='' to="/about">About</Link></p>
+                            <p className='pages_p'><Link className='' to="/contact">Contact</Link></p>
                         </div>
 
                         <div className="col-md-4 resources">

@@ -1,19 +1,72 @@
 import React, { useEffect, useState } from 'react'
 import TypedText from "./../components/TypedText"
-import "./Travel.css"
-import { Link } from "react-router-dom"
 import Navbar from "./../components/Navbar"
-// import beauty from "./../images/travelimages/beauty of africa.jpg"
 import Props from './../components/Props'
 import axios from 'axios';
 import Footer from "./../components/Footer"
-
+import { Link, useNavigate } from "react-router-dom"
+import "./Travel.css"
 
 
 function Travel() {
 
+  const navigate = useNavigate()
+
+  const [status, setstatus] = useState(false)
+
+  const [articles, setarticles] = useState([])
+
+
+
+
+  function handlePost(e) {
+
+    let category = window.location.href.split("/").pop()
+
+    e.preventDefault()
+
+    setstatus(true)
+
+    let id = localStorage.getItem("id")
+
+    let data = new FormData(e.currentTarget)
+    data.append("category", category)
+
+    axios.post(`http://localhost:8000/create/${id}`, data)
+      .then((res) => {
+        alert("Post created")
+        navigate("/")
+      })
+
+      .catch((err) => {
+        // for(let key in err.response.data) {
+        //   alert(`${key}: ${err.response.data[key]}`)
+        // }
+        console.log(err);
+
+      })
+      .finally(() => setstatus(false))
+
+  }
+
+  useEffect(() => {
+
+    axios.get(`http://localhost:8000/allposts/travel`,)
+      .then((res) => setarticles(res.data))
+      .catch((err) => console.log(err))
+
+  }, [])
+
+
   const strings = ['Hello', 'This is a world travel blog featuring beautiful destinations', 'New experiences and hidden places around the globe', 'Please Tag Along!.']
 
+  useEffect(() => {
+
+    axios.get(`http://localhost:8000/allposts/`,)
+      .then((res) => setarticles(res.data))
+      .catch((err) => console.log(err))
+
+  }, [])
   return (
     <div className='container_all'>
       <Navbar />
@@ -26,6 +79,81 @@ function Travel() {
               <TypedText strings={strings} />
             </h2>
 
+
+            <Link
+              type="button"
+              className="btn btn-primary btn-lg mt-5 ms-3 m-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#modalId"
+            >
+              {status && <div className="spinner-grow"></div>}
+              Post
+            </Link>
+
+
+            {/* Modal Body */}
+            {/* if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard */}
+            <div
+              className="modal fade"
+              id="modalId"
+              tabindex="-1"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+
+              role="dialog"
+              aria-labelledby="modalTitleId"
+              aria-hidden="true"
+            >
+              <div
+                className="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                role="document"
+              >
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="modalTitleId">
+                      Post Here
+                    </h5>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div className="modal-body">
+                    <form onSubmit={handlePost} id='form'>
+
+                      <div>
+                        <label htmlFor="" className='form-label'>Title</label>
+                        <input name='title' type="text" className='form-control' />
+
+                      </div>
+
+
+                      <div>
+                        <label htmlFor="" className='form-label'>Description</label>
+                        <textarea name="description" className='form-control' id=""></textarea>
+                      </div>
+
+                      <div>
+                        <label htmlFor="" className='form-label'>Photos</label>
+                        <input type="file" name='images' multiple className='form-control' />
+                      </div>
+
+                      <button className='btn btn-dark' type='submit'>
+                        {status === true && <div className="spinner-border"></div>}
+                        Post
+                      </button>
+
+                    </form>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Optional: Place to the bottom of scripts */}
           </div>
 
         </div>
@@ -68,65 +196,23 @@ function Travel() {
             </div>
           </div>
 
-
         </div>
       </div>
 
       <div className="container desert mb-5">
         <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <img src="https://media.cnn.com/api/v1/images/stellar/prod/200317140716-04-egypt-white-desert-restricted.jpg?q=w_1110,c_fill" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title fw-bold display-6">HELLO! AFRICA</h5>
-                <p className="card-text">
-                  It is the second largest continent of the world. ...
-                  There are 54 countries in Africa. ...
-                  Africa has the world's largest desert – sort of! ...
-                  It is home to the world's longest river, The Nile. ...
-                  Most of the world's diamonds come from Africa.
-                </p>
-                <Link className='Readmore fw-bold'>Read More...</Link>
-              </div>
-            </div>
-          </div>
+           {
+          articles?.map((row) =>(
+            <div className="col-md-3">
 
-          <div className="col-md-4">
-            <div className="card">
-              <img src="https://media.cnn.com/api/v1/images/stellar/prod/200317140716-04-egypt-white-desert-restricted.jpg?q=w_1110,c_fill" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title fw-bold display-6">HELLO! NAMIBIA</h5>
-                <p className="card-text">
-                  It has the world's tallest sand dune. ...
-                  Fish River Canyon is second-only to the Grand Canyon. ...
-                  The food is surprisingly good. ...
-                  More cheetah live here than anywhere else. ...
-                  It gets cold sometimes. ...
-                  There are very few people here. ...
-
-                </p>
-                <Link className='Readmore fw-bold'>Read More...</Link>
-              </div>
-            </div>
+            <Link className='' to={`http://localhost:3000/details/${row?.id}`}>
+              <img src={`http://localhost:8000/${row?.images[0]?.image}`} alt="" className='img-fluid' />
+              <h5> {row?.title}</h5>
+            </Link>
           </div>
+          ))
+         }
 
-          <div className="col-md-4">
-            <div className="card">
-              <img src="https://media.cnn.com/api/v1/images/stellar/prod/200317140716-04-egypt-white-desert-restricted.jpg?q=w_1110,c_fill" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title fw-bold display-6">HELLO! Kenya</h5>
-                <p className="card-text">
-                  Official Name: United States of America.
-                  Population: 324, 057, 300.
-                  Form of Government: Constitution-based federal republic.
-                  Capital: Washington, D.C.
-                  Area: 9, 826, 630 square kilometres.
-                  Area: 9, 826, 630 square kilometres.
-                </p>
-                <Link className='Readmore fw-bold'>Read More...</Link>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -143,27 +229,13 @@ function Travel() {
         </div>
       </div>
 
-
       <div className='popular_places'>
         <h2 className='fw-bold mb-5'>Recent Budget Travel Post</h2>
       </div>
 
       <div className="container desert mb-5">
         <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <img src={require("./../images/forestlodge.jpg")} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title fw-bold">Camping & Hiking at Castle Forest Lodge</h5>
-                <p className="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi rem incidunt libero molestias id qui repudiandae magni molestiae iste modi beatae eius, consectetur perferendis sed voluptatum vero omnis corporis alias!
-                </p>
-                <Link className='Readmore fw-bold'>Read More...</Link>
-              </div>
-            </div>
-          </div>
-
-
+        
           <div className="col-md-4">
             <div className="card">
               <img src={require("./../images/travelimages/budget7.jpeg")} className="card-img-top" alt="..." />

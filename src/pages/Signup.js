@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import api from '../api'
 import { toast } from 'react-toastify'
@@ -7,9 +7,12 @@ import "./Signup.css"
 function Signup() {
 
   const navigate = useNavigate()
+  const [status, setstatus] = useState(false)
 
   function handleSignup(e) {
     e.preventDefault()
+
+    setstatus(true)
 
     let data = new FormData(e.currentTarget)
 
@@ -23,6 +26,7 @@ function Signup() {
           toast.error(`${key}: ${err.response.data[key]}`)
         }
       })
+      .finally(() => setstatus(false))
   }
 
   return (
@@ -56,7 +60,10 @@ function Signup() {
               <input type="password" name='password' className='form-control' />
             </div>
 
-            <button className='btn mt-4'>Submit</button>
+            <button className='btn mt-4'>
+              {status === true && <span className="spinner-border"></span> }
+              Submit
+              </button>
 
             <h6 className='mt-2 '>Already have an account? <Link className='login' to="/login">Login</Link></h6>
           </form>

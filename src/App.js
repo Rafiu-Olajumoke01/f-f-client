@@ -18,9 +18,8 @@ const Login = React.lazy(() => import("./pages/Login"))
 const Signup = React.lazy(() => import("./pages/Signup"))
 const Travel = React.lazy(() => import("./pages/Travel"))
 const Food = React.lazy(() => import("./pages/Food"))
-const News = React.lazy(() => import("./pages/News"))
+
 const About = React.lazy(() => import("./pages/About"))
-const Explore = React.lazy(() => import("./pages/Explore"))
 const Contact = React.lazy(() => import("./pages/Contact"))
 const Notfound = React.lazy(() => import("./pages/Notfound"))
 
@@ -31,7 +30,7 @@ function App() {
   
   return (
     <div>
-      <React.Suspense fallback={<div style={{ position: "absolute", top: "50%", left: "43%" }}>
+      <React.Suspense fallback={<div style={{ position: "absolute", top: "50%", left: "40%" }}>
         <h3>FOOD AND FARAWAY</h3>
       </div>}>
         <BrowserRouter>
@@ -41,11 +40,9 @@ function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/travel' element={<Travel />} />
             <Route path='/food' element={<Food />} />
-            <Route path='/news' element={<News />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/details/:id' element={<Details />} />
-            <Route path='/explore' element={<Explore />} />
             <Route path='/*' element={<Notfound />} />
           </Routes>
           <ToastContainer
