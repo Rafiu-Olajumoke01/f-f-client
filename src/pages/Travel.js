@@ -82,7 +82,7 @@ function Travel() {
 
             <Link
               type="button"
-              className="btn btn-primary btn-lg mt-5 ms-3 m-auto"
+              className="btn btn-primary btn-lg mt-5 ms-3 "
               data-bs-toggle="modal"
               data-bs-target="#modalId"
             >
@@ -146,7 +146,6 @@ function Travel() {
                       </button>
 
                     </form>
-
 
                   </div>
                 </div>

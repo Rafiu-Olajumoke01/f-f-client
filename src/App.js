@@ -27,7 +27,7 @@ const Notfound = React.lazy(() => import("./pages/Notfound"))
 
 function App() {
   const login = useSelector((state) => state.user.login)
-  
+
   return (
     <div>
       <React.Suspense fallback={<div style={{ position: "absolute", top: "50%", left: "40%" }}>
@@ -35,9 +35,8 @@ function App() {
       </div>}>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={ login == false? <Home /> : <Login/>} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
+            <Route path='/' element={login == false ? <Home /> : <Login />} />
+            <Route path='/login' element={<Login />} /><Route path='/signup' element={<Signup />} />
             <Route path='/travel' element={<Travel />} />
             <Route path='/food' element={<Food />} />
             <Route path='/about' element={<About />} />
@@ -46,12 +45,12 @@ function App() {
             <Route path='/*' element={<Notfound />} />
           </Routes>
           <ToastContainer
-          position='top-center'
+            position='top-center'
           />
         </BrowserRouter>
       </React.Suspense>
 
-     
+
     </div>
   );
 }

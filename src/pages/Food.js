@@ -81,7 +81,7 @@ function Food() {
               {/* Modal trigger button */}
               <Link
                 type="button"
-                className="btn btn-primary btn-lg mt-5 ms-3"
+                className="btn btn-primary btn-lg mt-5 ms-3 "
                 data-bs-toggle="modal"
                 data-bs-target="#modalId"
               >
